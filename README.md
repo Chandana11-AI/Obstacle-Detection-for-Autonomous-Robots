@@ -1,6 +1,8 @@
 # Obstacle Detection for Autonomous Robots
 
-Real-time computer vision project for detecting, segmenting, and interpreting obstacles in autonomous navigation scenarios using RGB-D data.
+Industry-sponsored machine-learning capstone exploring object detection, instance segmentation and RGB-D perception for autonomous navigation.
+
+**Context:** September 2024–April 2025. This public repository is a technical case study; it contains no training code, dataset, trained model or reproducible benchmark. Real-time operation is an application goal, not a measured latency claim in this snapshot.
 
 ## Project Overview
 
@@ -88,7 +90,7 @@ My work on the capstone focused on the computer-vision component of the autonomo
 - examining how model outputs could be incorporated into a robotic perception pipeline
 - documenting the model-development and evaluation process
 
-The project was completed as part of a capstone collaboration with Kevares Automation Solutions.
+The project was completed as part of a capstone collaboration with Kevares (industry capstone partner).
 
 ## Evaluation
 
@@ -126,6 +128,24 @@ A future revision can include:
 - quantitative model-comparison results
 - detection and segmentation visualizations
 - inference examples
+
+## Repository Contents and Reproduction
+
+The current repository contains `README.md` only. There is no install command or inference entry point to run from this checkout.
+
+Reproducing the study would require the original permitted dataset, annotations, train/validation/test assignments, model configuration, checkpoints and evaluation environment. Those artifacts are not published here.
+
+## Evaluation Design and Trade-offs
+
+Detection accuracy and speed should be assessed together. A stronger comparison would fix the dataset split, image resolution, hardware and confidence thresholds, then report per-class precision/recall, mAP and latency under the same conditions.
+
+Depth adds further constraints: RGB and depth frames must be aligned, invalid depth values need handling, and distance estimates should be checked against sensor behavior. A bounding box or segmentation mask alone is not a complete collision-avoidance system.
+
+YOLOv11, RT-DETR and Mask R-CNN represent different modeling approaches; including a model in the study does not establish that it was deployed successfully or outperformed the others.
+
+## Team Scope and My Role
+
+This was a collaborative capstone. My contribution centered on researching, developing/evaluating and documenting the computer-vision workflow. The complete robot autonomy stack, downstream navigation and every team deliverable are not claimed as my sole work.
 
 ## Key Skills Demonstrated
 
